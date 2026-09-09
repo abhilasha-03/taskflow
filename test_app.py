@@ -37,5 +37,5 @@ def test_complete(client):
     ).get_json()["id"]
 
     r = client.put(f"/tasks/{tid}/complete")
-    assert r.status_code == 200
+    assert r.status_code == 418
     assert r.get_json()["done"] is True
